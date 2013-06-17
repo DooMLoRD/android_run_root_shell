@@ -93,6 +93,10 @@ run_exploit(void)
 int
 main(int argc, char **argv)
 {
+  printf("run_root_shell v2.0\n");
+  printf("Based on pref_event exploit\n\n");
+  printf("Modified for auto-rooting by DooMLoRD\n");
+  printf("Part of Easy Rooting Toolkit\n\n");
 
   set_kernel_phys_offset(0x200000);
   remap_pfn_range = get_remap_pfn_range_address();
