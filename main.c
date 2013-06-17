@@ -93,10 +93,13 @@ run_exploit(void)
 int
 main(int argc, char **argv)
 {
-  printf("run_root_shell v2.0\n");
+  printf("run_root_shell v2.1\n");
   printf("Based on pref_event exploit\n\n");
   printf("Modified for auto-rooting by DooMLoRD\n");
   printf("Part of Easy Rooting Toolkit\n\n");
+  printf("Changelog:\n");
+  printf("v2.0: added support for Xperia S  (LT26)  {FW: 6.2.B.0.211}    [Cust: 1257-8080]\n");
+  printf("v2.1: added support for Xperia Z  (C6603) {FW: 10.1.1.A.1.307} [Cust: 1270-6704]\n");
 
   set_kernel_phys_offset(0x200000);
   remap_pfn_range = get_remap_pfn_range_address();
